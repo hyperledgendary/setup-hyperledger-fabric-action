@@ -1,0 +1,10 @@
+name: setup-hyperledger-fabric
+description: Setup Hyperledger Fabric cli tools
+inputs:
+  version:
+    description: Version of Hyperledger Fabric CLI to install
+    required: false
+    default: 2.4.7
+runs:
+  using: node16
+  main: dist/index.js
