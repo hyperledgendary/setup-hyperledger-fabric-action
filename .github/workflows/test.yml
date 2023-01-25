@@ -27,12 +27,15 @@ jobs:
       with:
         version: ${{ matrix.version }}
 
-    - name: Capture gh version installed
+    - name: Capture fabric version installed
       run: |
         ls -lart
-
-        peer version
         echo $FABRIC_CFG_PATH
+        ls -lart $FABRIC_CFG_PATH
+        ls -lart $FABRIC_CFG_PATH/..
+        
+        peer version
+
 
     # - name: Verify
     #   shell: python

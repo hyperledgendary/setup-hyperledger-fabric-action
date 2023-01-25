@@ -17,7 +17,7 @@ async function setup() {
     const pathToCLI = await extract(pathToTarball);
 
     // Expose the tool by adding it to the PATH
-    core.addPath(path.join(pathToCLI, download.binPath));
+    core.addPath(path.join(pathToCLI,'bin'));
 
     // Set the Fabric CFG
     core.exportVariable('FABRIC_CFG_PATH', path.join(pathToCLI,'config'));
