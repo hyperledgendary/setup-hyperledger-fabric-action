@@ -1,37 +1,34 @@
-# :gear: `setup-gh` ![](https://github.com/github-developer/setup-gh/workflows/Tests/badge.svg)
-> An example action, demonstrating how CLI authors may develop actions that allow setup their of CLIs on GitHub's  hosted runners, using JavaScript
+# :gear: `setup-hyperledger-fabric-action` 
+> Action to setup Hyperledger Fabric CLIs
 
 ## About
-This action, which is intended _for demonstration use only_, sets up the GitHub CLI, [`gh`](https://github.com/cli/cli), on GitHub's hosted Actions runners.
 
-This action can be run on `ubuntu-latest`, `windows-latest`, and `macos-latest` GitHub Actions runners, and will install and expose a specified version of the `gh` CLI on the runner environment.
+This action will install the Hyperledger Fabric CLIs (peer, fabric-ca-client etc) and set the path and `FABRIC_CFG_CONFIG` 
 
 ## Usage
 
-Setup the `gh` CLI:
+To install the latest version
 
 ```yaml
 steps:
-- uses: github-developer/setup-gh@v1
+- uses: hyperledgendary/setup-hyperledger-fabric-action
 ```
 
-A specific version of the `gh` CLI can be installed:
+To setup a specific version:
 
 ```yaml
 steps:
-- uses: github-developer/setup-gh@v1
+- uses: hyperledgendary/setup-hyperledger-fabric-action
   with:
     version:
-      1.1.0
+      2.4.7
 ```
 
 ## Inputs
 The actions supports the following inputs:
 
-- `version`: The version of `gh` to install, defaulting to `1.2.0`
+- `version`: The version to install, defaulting to `2.4.7`
 
-## Further reading
-For information on Creating a JavaScript action, read [the docs](https://docs.github.com/actions/creating-actions/creating-a-javascript-action).
 
 ## License
-[MIT](LICENSE).
+[APACAHE-2.0](LICENSE).
