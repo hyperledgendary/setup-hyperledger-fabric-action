@@ -17,7 +17,7 @@ jobs:
     strategy:
       matrix:
         os: [macos-latest, ubuntu-latest]
-        version: [2.4.7,2.5.0-alpha3]
+        version: [2.4.7,2.5.0-beta]
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -35,6 +35,7 @@ jobs:
         ls -lart $FABRIC_CFG_PATH/..
 
         peer version
+        docker images
 
 
     # - name: Verify
