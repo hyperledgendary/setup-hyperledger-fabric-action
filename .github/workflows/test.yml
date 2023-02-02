@@ -20,7 +20,7 @@ jobs:
         version: [2.4.7,2.5.0-beta]
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Setup fabric
       uses: ./
@@ -35,15 +35,6 @@ jobs:
         ls -lart $FABRIC_CFG_PATH/..
 
         peer version
-        docker images
 
 
-    # - name: Verify
-    #   shell: python
-    #   env:
-    #     GH_VERSION_EXPECTED: ${{ matrix.version }}
-    #   run: |
-    #     import sys, os
-    #     sys.exit(
-    #         int(not os.environ["GH_VERSION_EXPECTED"] in os.environ["GH_VERSION_INSTALLED"])
-    #     )
+
